@@ -21,7 +21,7 @@ const Bags = () => {
         let newCart = [];
         const randomIndex = parseInt(Math.random() * cart.length);
         const itemIndex = cart[randomIndex];
-        newCart = ['This one is for you', itemIndex];
+        newCart = [itemIndex];
         setCart(newCart)
     }
     const handleChooseAgain = () => {

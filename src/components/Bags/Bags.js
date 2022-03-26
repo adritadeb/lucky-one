@@ -16,6 +16,9 @@ const Bags = () => {
         newCart = [...cart, selectedItem];
         setCart(newCart);
     };
+    const handleChooseAgain = () => {
+        setCart([]);
+    }
     return (
         <div>
             <h1><span className='header-part'>Increase</span> Collection</h1>
@@ -31,7 +34,9 @@ const Bags = () => {
                     }
                 </div>
                 <div className='cart-container'>
-                    <Cart cart={cart}></Cart>
+                    <Cart
+                        cart={cart}
+                        handleChooseAgain={handleChooseAgain}></Cart>
                 </div>
             </div>
         </div>

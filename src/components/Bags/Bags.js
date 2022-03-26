@@ -1,27 +1,38 @@
 import React, { useEffect, useState } from 'react';
 import Bag from '../Bag/Bag';
+import Cart from '../Cart/Cart';
 import './Bags.css';
 
 const Bags = () => {
     const [bags, setBags] = useState([]);
+    const [cart, setCart] = useState([]);
     useEffect(() => {
         fetch('productApi.json')
             .then(res => res.json())
             .then(data => setBags(data))
     }, [])
+    const handleAddToCart = (selectedItem) => {
+        let newCart = [];
+        newCart = [...cart, selectedItem];
+        setCart(newCart);
+    };
     return (
-        <div className='shop-container'>
+        <div>
             <h1><span className='header-part'>Increase</span> Collection</h1>
             <h3>Choose 4 items</h3>
-            <div>
+            <div className='shop-container'>
                 <div className='product-container'>
                     {
                         bags.map(bag => <Bag
+                            key={bag.id}
                             bag={bag}
-                            key={bag.id}></Bag>)
+                            handleAddToCart={handleAddToCart}></Bag>
+                        )
                     }
                 </div>
-                <div></div>
+                <div className='cart-container'>
+                    <Cart cart={cart}></Cart>
+                </div>
             </div>
         </div>
     );

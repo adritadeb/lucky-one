@@ -1,6 +1,7 @@
 .bag-info{
     border: 2px solid rgba(252, 146, 162, 0.836);
     border-radius: 10px;
+    position: relative;
 }
 .bag-info img{
     width: 80%;
@@ -8,6 +9,7 @@
 .add-btn{
     width: 100%;
     border: none;
+    border-radius: 0px 0px 8px 8px;
     background-color: rgba(253, 151, 166, 0.274);
     font-size: 17px;
     padding: 10px;

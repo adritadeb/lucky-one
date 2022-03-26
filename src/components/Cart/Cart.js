@@ -3,7 +3,7 @@ import './Cart.css';
 
 const Cart = ({ cart, handleChooseAgain }) => {
     return (
-        <div>
+        <div className='cart-item'>
             <h3>Selected Items</h3>
             {
                 cart.map(item => <p>{item}</p>)

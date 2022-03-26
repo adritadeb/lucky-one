@@ -1,7 +1,7 @@
 import React from 'react';
 import './Cart.css';
 
-const Cart = ({ cart, handleChooseAgain }) => {
+const Cart = ({ cart, handlePickOne, handleChooseAgain }) => {
     return (
         <div className='cart-item'>
             <h3>Selected Items</h3>
@@ -9,7 +9,7 @@ const Cart = ({ cart, handleChooseAgain }) => {
                 cart.map(item => <p>{item}</p>)
             }
             <div className='cart-btn'>
-                <button className='pick-btn'>Pick One</button>
+                <button onClick={() => handlePickOne()} className='pick-btn'>Pick One</button>
                 <button onClick={() => handleChooseAgain()} className='choose-btn'>Choose Again</button>
             </div>
         </div>

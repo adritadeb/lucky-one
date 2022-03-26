@@ -6,6 +6,7 @@ import './Bags.css';
 const Bags = () => {
     const [bags, setBags] = useState([]);
     const [cart, setCart] = useState([]);
+
     useEffect(() => {
         fetch('productApi.json')
             .then(res => res.json())
@@ -13,9 +14,16 @@ const Bags = () => {
     }, [])
     const handleAddToCart = (selectedItem) => {
         let newCart = [];
-        newCart = [...cart, selectedItem];
+        newCart = [...cart, selectedItem.name];
         setCart(newCart);
     };
+    const handlePickOne = () => {
+        let newCart = [];
+        const randomIndex = parseInt(Math.random() * cart.length);
+        const itemIndex = cart[randomIndex];
+        newCart = ['This one is for you', itemIndex];
+        setCart(newCart)
+    }
     const handleChooseAgain = () => {
         setCart([]);
     }
@@ -36,6 +44,7 @@ const Bags = () => {
                 <div className='cart-container'>
                     <Cart
                         cart={cart}
+                        handlePickOne={handlePickOne}
                         handleChooseAgain={handleChooseAgain}></Cart>
                 </div>
             </div>

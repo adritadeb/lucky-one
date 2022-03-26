@@ -3,4 +3,4 @@
 
 
 # Project live-site link
-## ->[live-site link](https://github.com/facebook/create-react-app)
+## ->[live-site link](https://increase-collection-adrita.netlify.app/)

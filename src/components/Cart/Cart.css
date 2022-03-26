@@ -5,6 +5,9 @@
 .cart-btn{
     margin: 0 15px;
 }
+.cart-btn button:hover{
+    background-color: rgba(250, 156, 170, 0.397);
+}
 .pick-btn{
     display: block;
     border: 2px solid black;

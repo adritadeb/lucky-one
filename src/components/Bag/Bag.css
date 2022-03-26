@@ -1,10 +1,13 @@
 .bag-info{
+    width: 300px;
+    height: 510px;
     border: 2px solid rgba(252, 146, 162, 0.836);
     border-radius: 10px;
     position: relative;
 }
 .bag-info img{
-    width: 80%;
+    width: 278px;
+    height: 278px;
 }
 .add-btn{
     width: 100%;
@@ -12,9 +15,12 @@
     border-radius: 0px 0px 8px 8px;
     background-color: rgba(253, 151, 166, 0.274);
     font-size: 17px;
-    padding: 10px;
-    position: relative;
+    padding: 5px;
+    position: absolute;
     bottom: 0;
+    display:flex;
+    align-items:center;
+    justify-content: center;
 }
 .add-btn:hover{
     background-color: rgba(252, 146, 162, 0.637);

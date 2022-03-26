@@ -9,8 +9,9 @@ const Bag = ({ bag, handleAddToCart }) => {
         <div className='bag-info'>
             <img src={img} alt="" />
             <h2>{name}</h2>
-            <h3>Price: {price}</h3>
-            <button className='add-btn' onClick={() => handleAddToCart(bag)}>Add to Cart
+            <h3>Price: ${price}</h3>
+            <button className='add-btn' onClick={() => handleAddToCart(bag)}>
+                <p>Add to Cart</p>
                 <FontAwesomeIcon className='cart-icon' icon={faCartPlus}></FontAwesomeIcon></button>
         </div>
     );
